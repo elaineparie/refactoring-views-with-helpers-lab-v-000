@@ -3,7 +3,7 @@ module ArtistsHelper
     if !song.artist
       link_to 'Add Artist', "/songs/#{song.id}/edit"
     else
-      redirect_to "/artists/#{song.artists.id}"
+      redirect_to "/artists/#{song.artist.id}"
     end
 
   end
