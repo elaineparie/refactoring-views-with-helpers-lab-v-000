@@ -3,7 +3,9 @@ class Song < ActiveRecord::Base
   accepts_nested_attributes_for :artist
 
   def artist_name
+    if self.artist.name
      self.artist.name
+   end
   end
 
   def artist_name=(name)
